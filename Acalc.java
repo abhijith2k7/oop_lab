@@ -11,7 +11,7 @@ class Calculator {
 
   
     public void showDecimalSum(double a, double b) {
-        double result = this.add(a, b);   // calling private method
+        double result = this.add(a, b);  
         System.out.println("Decimal Sum: " + result);
     }
 }
