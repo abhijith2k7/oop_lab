@@ -5,7 +5,6 @@ class Calculator {
         return a + b;
     }
 
-    
     protected void display() {
         System.out.println("This is Calculator display method");
     }
@@ -14,8 +13,6 @@ class Calculator {
     private void show() {
         System.out.println("Private show method in Calculator");
     }
-
-  
     public void accessPrivate() {
         show();
     }
@@ -26,7 +23,7 @@ class AdvancedCalculator extends Calculator {
   
     public int add(int a, int b) {
         System.out.println("Child overridden add method");
-        return a + b + 10;   // modified behavior
+        return a + b + 10; 
     }
 
    
@@ -55,7 +52,7 @@ public class Bcalc{
         System.out.println("-------------------");
         Calculator ref = new AdvancedCalculator();
         System.out.println("Sum: " + ref.add(5, 5)); 
-        ref.display();  // child method runs
-        ref.accessPrivate();  // parent method
+        ref.display();  
+        ref.accessPrivate();  
     }
 }
