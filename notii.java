@@ -24,13 +24,9 @@ class AppNotifier extends Notifier {
     public void testMethods() {
 
         // accessing inherited methods
-        send("Hello User");                         // public
-        send("Hello Email", "user@gmail.com");      // protected
-        send("Hello SMS", 9876543210L);             // default
-
-        // send("msg","mail",123)  ❌ not accessible (private)
-
-        // accessing private indirectly
+        send("Hello User");
+        send("Hello Email", "user@gmail.com");     
+        send("Hello SMS", 9876543210L);            
         accessPrivate("Secret Msg", "admin@gmail.com", 9999999999L);
     }
 }
