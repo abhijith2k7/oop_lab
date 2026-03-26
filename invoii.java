@@ -5,7 +5,7 @@ class InvoiceProcessor {
         System.out.println("Total Amount: " + total);
     }
     private double calculate(double amount) {
-        return amount + (amount * 0.18);  // GST 18%
+        return amount + (amount * 0.18); 
     }
     public void accessCalculation(double amount) {
         System.out.println("Calculated Amount: " + calculate(amount));
@@ -15,7 +15,7 @@ class InvoiceProcessor {
 class RetailInvoice extends InvoiceProcessor {
     public void generateInvoice(String customer, double amount) {
         System.out.println("Retail Invoice for " + customer);
-        double discounted = amount - (amount * 0.10); // 10% discount
+        double discounted = amount - (amount * 0.10);
         System.out.println("After Discount: " + discounted);
     }
 }
@@ -31,7 +31,7 @@ public class invoii{
         obj2.generateInvoice("Abhi", 1000);
         System.out.println("-------------------");
         InvoiceProcessor ref = new RetailInvoice();
-        ref.generateInvoice("Abhi", 1000);  // child method runs
-        ref.accessCalculation(1000);        // parent method
+        ref.generateInvoice("Abhi", 1000);
+        ref.accessCalculation(1000);       
     }
 }
